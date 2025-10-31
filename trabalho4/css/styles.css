@@ -1,0 +1,78 @@
+@import url('variables.css');
+
+/* Reset de Estilos Básicos */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-neutra-2);
+    color: var(--cor-neutra-4);
+}
+
+/* Estrutura do Grid Principal */
+header, footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--cor-primaria-2);
+    padding: var(--espaco-4);
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 var(--espaco-3);
+}
+
+nav ul li a {
+    color: var(--cor-neutra-1);
+    text-decoration: none;
+}
+
+/* Estilos dos Cards */
+.card {
+    background-color: var(--cor-neutra-1);
+    border: 1px solid var(--cor-neutra-3);
+    padding: var(--espaco-4);
+    margin: var(--espaco-3);
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Botões */
+button {
+    background-color: var(--cor-secundaria-1);
+    color: var(--cor-neutra-1);
+    border: none;
+    padding: var(--espaco-2) var(--espaco-3);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--cor-secundaria-2);
+}
+
+/* Formulários */
+input, select {
+    width: 50%;
+    padding: var(--espaco-2);
+    margin: var(--espaco-3) 0;
+    border: 1px solid var(--cor-neutra-3);
+    border-radius: 4px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
